@@ -2,9 +2,47 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url('https://images6.alphacoders.com/107/thumbbig-1073995.webp');
+    background-repeat: no-repeat;
+    background-position: 50px;
+    width: 100vw;
+    height: 100vh;
 }
 
 #pokeTitle {
     display: flex;
     justify-content: space-between;
+}
+
+.divTitle {
+    filter: drop-shadow(-3px 5px 5px black);
+    padding: .5rem;
+    padding: 1rem;
+}
+
+.divMenu, .menuList {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.searchInput {
+    padding: 1rem;
+}
+
+#search {
+    padding: 1rem;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    background-color: #4b3eff;
+}
+
+::placeholder {
+    color: #797979;
 }
