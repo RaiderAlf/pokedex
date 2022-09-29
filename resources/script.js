@@ -12,10 +12,19 @@ function fetchPoke(number) {
     } 
 };
 
+const searchInput = document.querySelector("#search");
+
 function createPokemon(pokemon) {
-    console.log(pokemon)
     const card = document.createElement('div');
     card.classList.add('pokemon-block');
+    card.id = "pokemon-block";
+    if(card) {
+        card.addEventListener('click', () => {
+        card.classList.replace('pokemon-block', 'pokemon-block-focus')
+    })
+    }else{
+        console.log("pokemon block doesn`t exists")
+    }
 
     const spriteContainer = document.createElement('div');
     spriteContainer.classList.add('img-container');
@@ -38,4 +47,4 @@ function createPokemon(pokemon) {
     pokemonContainer.appendChild(card);
 }
 
-fetchPoke(9)
+fetchPoke(18)

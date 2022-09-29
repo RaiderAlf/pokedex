@@ -55,7 +55,7 @@ a:hover {
 
 .contentApi {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     justify-items: center;
     gap: 2rem;
     padding-top: 2rem;
@@ -80,4 +80,10 @@ a:hover {
 
 .name, .number {
     text-align: center;
+}
+
+.pokemon-block-focus {
+    z-index: 100;
+    backdrop-filter: blur(5px), grayscale(50%);
+    transform: scale(2), translateX(50px);
 }
