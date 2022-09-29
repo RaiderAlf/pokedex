@@ -25,6 +25,7 @@ function createPokemon(pokemon) {
     spriteContainer.appendChild(sprite)
 
     const number = document.createElement('p');
+    number.classList.add('number');
     number.textContent = `#${pokemon.id.toString().padStart(3, 0)}`;
 
     const name = document.createElement('p');
@@ -35,4 +36,4 @@ function createPokemon(pokemon) {
     pokemonContainer.appendChild(card);
 }
 
-fetchPoke(20)
+fetchPoke(9)
