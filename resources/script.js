@@ -35,4 +35,4 @@ function createPokemon(pokemon) {
     pokemonContainer.appendChild(card);
 }
 
-fetchPoke(4)
+fetchPoke(20)
