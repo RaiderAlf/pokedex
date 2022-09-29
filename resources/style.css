@@ -35,6 +35,11 @@ a {
     text-decoration: none;
     color: black;
     text-shadow: 0 0 5px #50505071;
+    transition: all .2s linear
+}
+
+a:hover {
+    color: #a6a6a8;
 }
 
 #search {
@@ -52,7 +57,7 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
-    gap: 3rem;
+    gap: 2rem;
     padding-top: 2rem;
 }
 
@@ -61,6 +66,12 @@ a {
     padding: 2rem;
     border-radius: 15px;
     box-shadow: -3px 5px 5px #505050d2;
+    transition: all .3s linear;
+}
+
+.pokemon-block:hover {
+    transform: scale(1.1);
+    box-shadow: -5px 8px 9px #505050d2;
 }
 
 .img-container {

@@ -13,6 +13,7 @@ function fetchPoke(number) {
 };
 
 function createPokemon(pokemon) {
+    console.log(pokemon)
     const card = document.createElement('div');
     card.classList.add('pokemon-block');
 
@@ -20,6 +21,7 @@ function createPokemon(pokemon) {
     spriteContainer.classList.add('img-container');
 
     const sprite = document.createElement('img');
+    sprite.classList.add('img-src')
     sprite.src = pokemon.sprites.front_default;
 
     spriteContainer.appendChild(sprite)
@@ -30,7 +32,7 @@ function createPokemon(pokemon) {
 
     const name = document.createElement('p');
     name.classList.add('name');
-    name.textContent = pokemon.name;
+    name.textContent = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
 
     card.append(spriteContainer, number, name);
     pokemonContainer.appendChild(card);
