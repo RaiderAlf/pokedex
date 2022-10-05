@@ -59,8 +59,14 @@ nav .pagination li:hover {
 }
 
 .pokemon-block:hover {
-  transform: scale(1.05);
+  content: " ";
+  transform: rotate3d(0, 3, 1, 180deg);
   box-shadow: 0 0 15px #505050d2;
+  transition: all 1s infinite;
+}
+
+.pokemon-block:hover > .img-container, .pokemon-block:hover > .name, .pokemon-block:hover > .number{
+  opacity: 0;
 }
 
 .img-container {
@@ -71,3 +77,38 @@ nav .pagination li:hover {
 .name, .number {
   text-align: center;
 }
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #FFF;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: #FF3D00 transparent;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
