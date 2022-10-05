@@ -10,6 +10,19 @@ body {
   overflow: hidden;
 }
 
+.cabezal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cabezal input[type="number"] {
+  padding: .5rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-color: #bfbdd8;
+}
+
 h1 img {
   box-sizing: content-box;
   width: 12vw;
@@ -59,7 +72,7 @@ nav .pagination li:hover {
 }
 
 .pokemon-block:hover {
-  transform: rotate3d(0, 1, 0, 180deg);
+  transform: rotate3d(1, 0, 0, 180deg);
   box-shadow: 0 0 15px #505050d2;
   transition: all 1s infinite;
 }
@@ -113,13 +126,14 @@ nav .pagination li:hover {
 }
 
 .backCard {
-  transform: rotate3d(0, 1, 0, 180deg);
-  position: fixed;
+  transform: rotate3d(1, 0, 0, 180deg);
+  position: absolute;
   opacity: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: .4rem;
+  gap: .2rem;
 }
 
 .pokemon-block > .backCard {

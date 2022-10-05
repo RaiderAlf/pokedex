@@ -58,7 +58,7 @@ function createPokemon(pokemon) {
     spriteContainer.classList.add('img-container');
 
     const sprite = document.createElement('img');
-    sprite.classList.add('img-src')
+    sprite.classList.add('img-src');
     sprite.src = pokemon.sprites.front_default;
 
     spriteContainer.appendChild(sprite)
@@ -70,6 +70,10 @@ function createPokemon(pokemon) {
     const name = document.createElement('p');
     name.classList.add('name');
     name.textContent = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+
+    const spriteBack = document.createElement('img');
+    spriteBack.classList.add('img-src');
+    spriteBack.src = pokemon.sprites.back_default;
 
     const lifeBar = document.createElement('i');
     lifeBar.className = 'fi fi-rr-heart';
@@ -86,8 +90,7 @@ function createPokemon(pokemon) {
     const flipCard = document.createElement('div');
     flipCard.classList.add('backCard');
 
-    flipCard.append(lifeBar, attackBar, defenseBar);
+    flipCard.append(spriteBack, lifeBar, attackBar, defenseBar);
     card.append(spriteContainer, number, name, flipCard);
     pokemonContainer.appendChild(card);
-
 }
