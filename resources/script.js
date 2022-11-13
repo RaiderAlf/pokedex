@@ -1,15 +1,24 @@
 const pokeTitle = document.querySelector('#pokeTitle');
 const pokemonContainer = document.querySelector(".contentApi");
 const spinner = document.querySelector(".loader");
-const searchInput = document.querySelector("#search");
+const searchInput = document.getElementById("searchInput");
 const previous = document.querySelector(".previous");
 const next = document.querySelector('.next');
+const btnSearch = document.getElementById('btnSearch');
 
 let offset = 1;
 let limit = 8;
 
 window.onload = () => {
     fetchPoke(offset, limit);
+};
+
+btnSearch.addEventListener('click', searchPokemon(25))
+
+
+function searchPokemon(i){
+    pokemonContainer.innerHTML = " ";
+    fetchPoke(i);
 };
 
 previous.addEventListener('click', () => {

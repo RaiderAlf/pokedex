@@ -14,12 +14,18 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
 </head>
 <body>
     <header id="pokeTitle">
       <div class="cabezal">
         <h1><img src="img/pngwing.com.png" alt="pokemon"></h1>
-        <input type="number" id="searchInput">
+        <div id="searchDiv">
+          <input type="text" id="searchInput" placeholder="Buscar por ID">
+          <button id="btnSearch">
+            <i class="fi fi-rs-search-alt"></i>
+          </button>
+        </div>
       </div>
       <main class="contentApi" id="data"></main>
       <span class="loader"></span>
