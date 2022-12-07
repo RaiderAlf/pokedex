@@ -13,7 +13,9 @@ window.onload = () => {
     fetchPoke(offset, limit);
 };
 
-btnSearch.addEventListener('click', searchPokemon(25))
+btnSearch.addEventListener('click' || 'keyup', (e) => {
+    searchPokemon(searchInput.value)
+})
 
 
 function searchPokemon(i){
